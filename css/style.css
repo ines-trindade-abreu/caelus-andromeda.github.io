@@ -1,0 +1,338 @@
+/* ===== Global Styles ===== */
+:root {
+    --color-viridian: #1a7c79;
+    --color-accent-dark: #0d3f3d;
+    --color-white: #ffffff;
+    --color-light-gray: #f5f5f5;
+    --color-dark-gray: #333333;
+    --color-text-light: #666666;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-dark-gray);
+    line-height: 1.6;
+    background-color: var(--color-white);
+}
+
+/* ===== Top Info Bar ===== */
+.top-bar {
+    background-color: var(--color-viridian);
+    color: var(--color-white);
+    padding: 12px 0;
+    font-size: 14px;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.alternating-text {
+    flex: 1;
+    text-align: center;
+}
+
+.alternating-text span {
+    animation: fadeInOut 5s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 10% { opacity: 1; }
+    45%, 55% { opacity: 0; }
+    90%, 100% { opacity: 1; }
+}
+
+.contact-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-icons a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 18px;
+    transition: var(--transition);
+}
+
+.contact-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* ===== Navigation Bar ===== */
+.navbar {
+    background-color: var(--color-white);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.logo h2 {
+    color: var(--color-viridian);
+    font-size: 24px;
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--color-dark-gray);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--color-viridian);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-viridian);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* ===== Hero Section ===== */
+.hero {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(26, 124, 121, 0.7), rgba(13, 63, 61, 0.7));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.hero-overlay h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-overlay p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+    background-color: var(--color-white);
+    color: var(--color-viridian);
+    padding: 12px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Main Container ===== */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== Feature Cards Section ===== */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 60px 0;
+}
+
+.feature-card {
+    background-color: var(--color-light-gray);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: var(--transition);
+    border-top: 4px solid var(--color-viridian);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(26, 124, 121, 0.15);
+}
+
+.card-icon {
+    font-size: 40px;
+    color: var(--color-viridian);
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    color: var(--color-dark-gray);
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.feature-card p {
+    color: var(--color-text-light);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ===== Content Sections (for page-specific styling) ===== */
+.content-section {
+    padding: 60px 20px;
+}
+
+.content-section h2 {
+    color: var(--color-viridian);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+/* Home Page Specific */
+.home-content {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+/* About Page Styling (placeholder - customize later) */
+.about-content {
+    /* Add about page styles here */
+}
+
+/* Services Page Styling (placeholder - customize later) */
+.services-content {
+    /* Add services page styles here */
+}
+
+/* Contact Page Styling (placeholder - customize later) */
+.contact-content {
+    /* Add contact page styles here */
+}
+
+/* ===== Footer ===== */
+.footer {
+    background-color: var(--color-viridian);
+    color: var(--color-white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-overlay h1 {
+        font-size: 32px;
+    }
+
+    .hero-overlay p {
+        font-size: 16px;
+    }
+
+    .top-bar-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h2 {
+        font-size: 18px;
+    }
+
+    .hero-overlay h1 {
+        font-size: 24px;
+    }
+
+    .contact-icons {
+        gap: 15px;
+    }
+}
