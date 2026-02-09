@@ -1,31 +1,38 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caelus Andromeda, Lda.</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <title>Contact - Caelus Andromeda, Lda.</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-
-    <!-- Language Switcher in Top Bar -->
+    <!-- Top Bar -->
     <div class="top-bar">
         <div class="top-bar-content">
-            <div class="alternating-text" id="alternatingText">
-                <span class="text-a" lang="en">Location: Lisbon Metropolitan Area, Portugal</span>
-                <span class="text-b" lang="pt" style="display: none;">Localização: Área Metropolitana de Lisboa, Portugal</span>
+            <div class="theme-toggle-container">
+                <label class="toggle-switch" for="theme-toggle-checkbox">
+                    <input type="checkbox" id="theme-toggle-checkbox">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            <div class="alternating-text">
+                <span class="motto-text" data-i18n="motto1"></span>
+                <span class="motto-text" data-i18n="motto2" style="display:none;"></span>
             </div>
             <div class="top-right">
                 <div class="language-switcher">
-                    <button id="lang-en" class="lang-btn active" data-lang="en">EN</button>
+                    <button id="lang-en" class="lang-btn active" onclick="switchLang('en')">EN</button>
                     <span class="lang-divider">|</span>
-                    <button id="lang-pt" class="lang-btn" data-lang="pt">PT</button>
+                    <button id="lang-pt" class="lang-btn" onclick="switchLang('pt')">PT</button>
                 </div>
                 <div class="contact-icons">
-                    <a href="mailto:caelusandromeda@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="tel:+214151214" title="Phone"><i class="fas fa-phone"></i></a>
+                    <a href="tel:+351214151214" title="Phone" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                    <a href="mailto:caelusandromeda@gmail.com" title="Email" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://maps.google.com/?q=Lisbon+Metropolitan+Area+Portugal" target="_blank" title="Location" aria-label="Map"><i class="fas fa-map-marker-alt"></i></a>
                 </div>
             </div>
         </div>
@@ -34,107 +41,165 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="navbar-content">
-            <div class="logo">
-                <h2>YourLogo</h2>
-            </div>
+            <a href="index.html" class="logo">
+                <h2>Caelus Andromeda</h2>
+            </a>
             <ul class="nav-links">
-                <li><a href="index.html" lang="en">Page 1</a><a href="index.html" lang="pt" style="display: none;">Página 1</a></li>
-                <li><a href="page2.html" lang="en">Page 2</a><a href="page2.html" lang="pt" style="display: none;">Página 2</a></li>
-                <li><a href="page3.html" lang="en">Page 3</a><a href="page3.html" lang="pt" style="display: none;">Página 3</a></li>
-                <li><a href="page4.html" lang="en">Page 4</a><a href="page4.html" lang="pt" style="display: none;">Página 4</a></li>
+                <li><a href="about.html" data-i18n="navFirm">The Firm</a></li>
+                <li><a href="services.html" data-i18n="navServices">Services</a></li>
+                <li><a href="contact.html" data-i18n="navContact" class="active">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <img src="images/hero-bg.jpg" alt="Hero Background" class="hero-bg">
+    <!-- Hero Section - Compact -->
+    <section class="hero hero-contact">
+        <img src="images/hero-bg.jpg" alt="Contact Us" class="hero-bg">
         <div class="hero-overlay">
-            <h1 lang="en">Financial Excellence is our Practice/h1>
-            <h1 lang="pt" style="display: none;">Excelência Financeira é a nossa Prática</h1>
-            
-            <p lang="en">Expert accounting, auditing, consulting, and tax solutions</p>
-            <p lang="pt" style="display: none;">Soluções especializadas em contabilidade, auditoria, consultoria e impostos</p>
-            
-            <a href="services.html" class="cta-button">
-                <span lang="en">Discover our offer</span>
-                <span lang="pt" style="display: none;">Descubra a nossa oferta</span>
-            </a>
+            <h1 data-i18n="contactHeroTitle">Get in Touch</h1>
+            <p data-i18n="contactHeroSubtitle">We're here to help your business succeed</p>
         </div>
     </section>
 
-    <!-- Main Content -->
+    <!-- Main Contact Section -->
     <main class="main-container">
-        <!-- Feature Cards -->
-        <section class="features">
-            <div class="feature-card">
-                <div class="card-icon">
-                    <i class="fas fa-briefcase"></i>
-                </div>
-                <h3 lang="en">Professional Services</h3>
-                <h3 lang="pt" style="display: none;">Serviços Profissionais</h3>
-                
-                <p lang="en">Expert consultants with years of industry experience ready to help your business grow.</p>
-                <p lang="pt" style="display: none;">Consultores especialistas com anos de experiência pronta para ajudar seu negócio crescer.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="card-icon">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h3 lang="en">Data-Driven Strategy</h3>
-                <h3 lang="pt" style="display: none;">Estratégia Baseada em Dados</h3>
-                
-                <p lang="en">Leverage analytics and insights to make informed decisions that drive results.</p>
-                <p lang="pt" style="display: none;">Aproveite análises e insights para tomar decisões que impulsionem resultados.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="card-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-                <h3 lang="en">Dedicated Team</h3>
-                <h3 lang="pt" style="display: none;">Equipe Dedicada</h3>
-                
-                <p lang="en">Our talented team is committed to understanding your needs and delivering excellence.</p>
-                <p lang="pt" style="display: none;">Nossa equipe talentosa está comprometida em compreender suas necessidades e entregar excelência.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="card-icon">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <h3 lang="en">Trusted Partner</h3>
-                <h3 lang="pt" style="display: none;">Parceiro Confiável</h3>
-                
-                <p lang="en">Reliable, transparent partnerships built on integrity and proven track record.</p>
-                <p lang="pt" style="display: none;">Parcerias confiáveis e transparentes construídas sobre integridade e histórico comprovado.</p>
-            </div>
+        <section class="contact-intro">
+            <h2 data-i18n="contactIntroTitle">Let's Start a Conversation</h2>
+            <p data-i18n="contactIntroText">Whether you need accounting services, tax advice, or strategic consulting, our team is ready to assist. Reach out today to schedule a free consultation.</p>
         </section>
 
-        <!-- About Section -->
-        <section class="content-section home-content">
-            <h2 lang="en">About Us</h2>
-            <h2 lang="pt" style="display: none;">Sobre Nós</h2>
-            
-            <p lang="en">Welcome to our company. We specialize in providing innovative solutions that help businesses thrive in today's competitive landscape.</p>
-            <p lang="pt" style="display: none;">Bem-vindo à nossa empresa. Especializamo-nos em fornecer soluções inovadoras que ajudam os negócios a prosperar no cenário competitivo atual.</p>
-            
-            <p lang="en">With over 40 years of combined expertise, our team is dedicated to delivering exceptional results and building long-term partnerships.</p>
-            <p lang="pt" style="display: none;">Com mais de 40 anos de experiência combinada, nossa equipe está dedicada a entregar resultados excepcionais e construir parcerias de longo prazo.</p>
+        <!-- Contact Grid: Form + Info Cards -->
+        <div class="contact-grid">
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+                <h3 data-i18n="contactFormTitle">Send us a Message</h3>
+                <form id="contact-form" class="contact-form" method="POST" data-netlify="true" name="contact">
+                    <input type="hidden" name="form-name" value="contact">
+                    
+                    <div class="form-group">
+                        <label for="name" data-i18n="formLabelName">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" data-i18n="formLabelEmail">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" data-i18n="formLabelPhone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company" data-i18n="formLabelCompany">Company Name</label>
+                        <input type="text" id="company" name="company" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service" data-i18n="formLabelService">Service of Interest</label>
+                        <select id="service" name="service">
+                            <option value="" data-i18n="formSelectDefault">Select a service...</option>
+                            <option value="accounting" data-i18n="formSelectAccounting">Accounting</option>
+                            <option value="auditing" data-i18n="formSelectAuditing">Auditing</option>
+                            <option value="consulting" data-i18n="formSelectConsulting">Consulting</option>
+                            <option value="tax" data-i18n="formSelectTax">Tax Services</option>
+                            <option value="other" data-i18n="formSelectOther">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" data-i18n="formLabelMessage">Message *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder=""></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button" data-i18n="formSubmitButton">Send Message</button>
+                    <p class="form-note" data-i18n="formNote">We'll respond within 24 business hours.</p>
+                </form>
+            </div>
+
+            <!-- Contact Information Sidebar -->
+            <div class="contact-info-sidebar">
+                <h3 data-i18n="contactInfoTitle">Contact Information</h3>
+                
+                <!-- Contact Cards -->
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h4 data-i18n="infoPhoneTitle">Phone</h4>
+                        <p><a href="tel:+351214151214">+351 214 151 214</a></p>
+                        <p class="info-note" data-i18n="infoPhoneNote">Mon-Fri, 9:00 - 18:00</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-content">
+                        <h4 data-i18n="infoEmailTitle">Email</h4>
+                        <p><a href="mailto:caelusandromeda@gmail.com">caelusandromeda@gmail.com</a></p>
+                        <p class="info-note" data-i18n="infoEmailNote">We respond within 24h</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h4 data-i18n="infoLocationTitle">Location</h4>
+                        <p data-i18n="infoLocationAddress">Lisbon Metropolitan Area</p>
+                        <p data-i18n="infoLocationCountry">Portugal</p>
+                        <a href="https://maps.google.com/?q=Lisbon+Metropolitan+Area+Portugal" target="_blank" class="map-link" data-i18n="infoLocationMap">View on Map</a>
+                    </div>
+                </div>
+
+                <!-- Office Hours -->
+                <div class="office-hours">
+                    <h4 data-i18n="officeHoursTitle">Office Hours</h4>
+                    <ul>
+                        <li>
+                            <span data-i18n="hoursMonFri">Monday - Friday</span>
+                            <span class="hours-time">9:00 - 18:00</span>
+                        </li>
+                        <li>
+                            <span data-i18n="hoursSat">Saturday</span>
+                            <span class="hours-time" data-i18n="hoursClosed">Closed</span>
+                        </li>
+                        <li>
+                            <span data-i18n="hoursSun">Sunday</span>
+                            <span class="hours-time" data-i18n="hoursClosed">Closed</span>
+                        </li>
+                    </ul>
+                    <p class="hours-note" data-i18n="hoursNote">Appointments available by request</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Placeholder Section -->
+        <section class="map-section">
+            <h3 data-i18n="mapSectionTitle">Find Us</h3>
+            <div class="map-placeholder">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98386.06398090848!2d-9.225756!3d38.7436883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19331a61e4f33b%3A0x400ebbde49036d0!2sLisbon%2C%20Portugal!5e0!3m2!1sen!2spt!4v1234567890"
+                    width="100%" 
+                    height="400" 
+                    style="border:0; border-radius: 8px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Caelus Andromeda Location">
+                </iframe>
+            </div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <p lang="en">&copy; 2026 Your Company Name. All rights reserved.</p>
-        <p lang="pt" style="display: none;">&copy; 2026 Nome da Sua Empresa. Todos os direitos reservados.</p>
+        <p data-i18n="copyright">© 2026 Caelus Andromeda, Lda. All rights reserved.</p>
     </footer>
-
-    <!-- Language Switcher JavaScript -->
-    <script src="js/language-switcher.js"></script>
-    <!-- Alternating Text -->
-    <script src="js/alternating-text.js"></script>
-
 </body>
 </html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Caelus Andromeda, Lda.</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="theme-toggle-container">
+                <label class="toggle-switch" for="theme-toggle-checkbox">
+                    <input type="checkbox" id="theme-toggle-checkbox">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            <div class="alternating-text">
+                <span class="motto-text" data-i18n="motto1"></span>
+                <span class="motto-text" data-i18n="motto2" style="display:none;"></span>
+            </div>
+            <div class="top-right">
+                <div class="language-switcher">
+                    <button id="lang-en" class="lang-btn active" onclick="switchLang('en')">EN</button>
+                    <span class="lang-divider">|</span>
+                    <button id="lang-pt" class="lang-btn" onclick="switchLang('pt')">PT</button>
+                </div>
+                <div class="contact-icons">
+                    <a href="tel:+351214151214" title="Phone" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                    <a href="mailto:caelusandromeda@gmail.com" title="Email" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://maps.google.com/?q=Lisbon+Metropolitan+Area+Portugal" target="_blank" title="Location" aria-label="Map"><i class="fas fa-map-marker-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="logo">
+                <h2>Caelus Andromeda</h2>
+            </a>
+            <ul class="nav-links">
+                <li><a href="about.html" data-i18n="navFirm">The Firm</a></li>
+                <li><a href="services.html" data-i18n="navServices" class="active">Services</a></li>
+                <li><a href="contact.html" data-i18n="navContact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Clean & Professional -->
+    <section class="hero hero-services">
+        <img src="images/hero-bg.jpg" alt="Our Services" class="hero-bg">
+        <div class="hero-overlay">
+            <h1 data-i18n="servicesHeroTitle">Our Services</h1>
+            <p data-i18n="servicesHeroSubtitle">Comprehensive financial solutions tailored to your business needs</p>
+        </div>
+    </section>
+
+    <!-- Main Services Grid -->
+    <main class="main-container">
+        <section class="services-intro">
+            <h2 data-i18n="servicesIntroTitle">What We Offer</h2>
+            <p data-i18n="servicesIntroText">From startups to established enterprises, we provide the expertise and strategic insight needed to navigate today's complex financial landscape with confidence.</p>
+        </section>
+
+        <!-- Service Cards - Detailed -->
+        <section class="services-grid">
+            <!-- Accounting Service -->
+            <div class="service-detail-card">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3 data-i18n="service1Title">Accounting Services</h3>
+                </div>
+                <p class="service-description" data-i18n="service1Desc">Complete bookkeeping and financial record management solutions designed to keep your business compliant and organized.</p>
+                <ul class="service-list">
+                    <li data-i18n="service1Item1"><i class="fas fa-check-circle"></i> Monthly financial statements and reconciliation</li>
+                    <li data-i18n="service1Item2"><i class="fas fa-check-circle"></i> Accounts payable and receivable management</li>
+                    <li data-i18n="service1Item3"><i class="fas fa-check-circle"></i> Payroll processing and compliance</li>
+                    <li data-i18n="service1Item4"><i class="fas fa-check-circle"></i> Annual financial reporting and analysis</li>
+                    <li data-i18n="service1Item5"><i class="fas fa-check-circle"></i> Cloud-based accounting system integration</li>
+                </ul>
+                <a href="contact.html" class="service-cta" data-i18n="serviceLearnMore">Learn More</a>
+            </div>
+
+            <!-- Auditing Service -->
+            <div class="service-detail-card">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3 data-i18n="service2Title">Auditing & Assurance</h3>
+                </div>
+                <p class="service-description" data-i18n="service2Desc">Independent financial audits and assurance services that build trust with stakeholders and ensure regulatory compliance.</p>
+                <ul class="service-list">
+                    <li data-i18n="service2Item1"><i class="fas fa-check-circle"></i> Statutory financial audits</li>
+                    <li data-i18n="service2Item2"><i class="fas fa-check-circle"></i> Internal control assessments</li>
+                    <li data-i18n="service2Item3"><i class="fas fa-check-circle"></i> Compliance and regulatory reviews</li>
+                    <li data-i18n="service2Item4"><i class="fas fa-check-circle"></i> Risk management evaluations</li>
+                    <li data-i18n="service2Item5"><i class="fas fa-check-circle"></i> Due diligence for mergers and acquisitions</li>
+                </ul>
+                <a href="contact.html" class="service-cta" data-i18n="serviceLearnMore">Learn More</a>
+            </div>
+
+            <!-- Consulting Service -->
+            <div class="service-detail-card">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 data-i18n="service3Title">Business Consulting</h3>
+                </div>
+                <p class="service-description" data-i18n="service3Desc">Strategic financial consulting to optimize operations, improve profitability, and drive sustainable growth.</p>
+                <ul class="service-list">
+                    <li data-i18n="service3Item1"><i class="fas fa-check-circle"></i> Business planning and forecasting</li>
+                    <li data-i18n="service3Item2"><i class="fas fa-check-circle"></i> Cash flow optimization strategies</li>
+                    <li data-i18n="service3Item3"><i class="fas fa-check-circle"></i> Cost reduction and efficiency analysis</li>
+                    <li data-i18n="service3Item4"><i class="fas fa-check-circle"></i> Financial restructuring advisory</li>
+                    <li data-i18n="service3Item5"><i class="fas fa-check-circle"></i> Technology implementation support</li>
+                </ul>
+                <a href="contact.html" class="service-cta" data-i18n="serviceLearnMore">Learn More</a>
+            </div>
+
+            <!-- Tax Service -->
+            <div class="service-detail-card">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3 data-i18n="service4Title">Tax Services</h3>
+                </div>
+                <p class="service-description" data-i18n="service4Desc">Comprehensive tax planning and compliance services to minimize liabilities and maximize efficiency.</p>
+                <ul class="service-list">
+                    <li data-i18n="service4Item1"><i class="fas fa-check-circle"></i> Corporate and individual tax preparation</li>
+                    <li data-i18n="service4Item2"><i class="fas fa-check-circle"></i> VAT and indirect tax compliance</li>
+                    <li data-i18n="service4Item3"><i class="fas fa-check-circle"></i> Tax optimization and planning strategies</li>
+                    <li data-i18n="service4Item4"><i class="fas fa-check-circle"></i> International tax advisory</li>
+                    <li data-i18n="service4Item5"><i class="fas fa-check-circle"></i> Tax dispute resolution and representation</li>
+                </ul>
+                <a href="contact.html" class="service-cta" data-i18n="serviceLearnMore">Learn More</a>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="services-process">
+            <h2 data-i18n="processTitle">Our Process</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3 data-i18n="processStep1Title">Discovery</h3>
+                    <p data-i18n="processStep1Text">We listen to understand your unique challenges, goals, and current financial situation.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3 data-i18n="processStep2Title">Analysis</h3>
+                    <p data-i18n="processStep2Text">Our experts analyze your data and identify opportunities for improvement and growth.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3 data-i18n="processStep3Title">Strategy</h3>
+                    <p data-i18n="processStep3Text">We develop a tailored plan with clear milestones and measurable outcomes.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3 data-i18n="processStep4Title">Implementation</h3>
+                    <p data-i18n="processStep4Text">We execute the strategy with precision, keeping you informed every step of the way.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="services-cta-section">
+            <div class="cta-content">
+                <h2 data-i18n="ctaSectionTitle">Ready to Get Started?</h2>
+                <p data-i18n="ctaSectionText">Let's discuss how our services can help your business thrive. Contact us today for a free consultation.</p>
+                <a href="contact.html" class="cta-button-large" data-i18n="ctaSectionButton">Schedule a Consultation</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p data-i18n="copyright">© 2026 Caelus Andromeda, Lda. All rights reserved.</p>
+    </footer>
+</body>
+</html>
