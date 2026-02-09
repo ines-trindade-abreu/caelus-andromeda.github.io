@@ -45,6 +45,102 @@ body {
 .cta-button { background: var(--bg-primary); color: var(--viridian); }
 .cta-button:hover { box-shadow: 0 6px 12px rgba(0,0,0,0.3); }
 
+/* ===== iOS-STYLE TOGGLE SWITCH ===== */
+.theme-toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.3);
+  border: 2px solid rgba(255,255,255,0.5);
+  transition: 0.3s;
+  border-radius: 26px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+input:checked + .toggle-slider {
+  background-color: rgba(96,177,177,0.6);
+  border-color: rgba(96,177,177,0.8);
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(24px);
+}
+
+.toggle-slider:hover {
+  background-color: rgba(255,255,255,0.4);
+}
+
+input:checked + .toggle-slider:hover {
+  background-color: rgba(96,177,177,0.7);
+}
+
+/* ===== TOP BAR LAYOUT FIX ===== */
+.top-bar-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Left | Center | Right */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+.alternating-text {
+    text-align: center;
+    justify-self: center;
+}
+
+.top-right {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .top-bar-content {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .theme-toggle-container, .top-right {
+        justify-self: center;
+    }
+}
+
 /* ===== RESET & BASE ===== */
 * {
     margin: 0;
