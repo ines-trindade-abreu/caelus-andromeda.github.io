@@ -201,14 +201,16 @@ const translations = {
     formSelectOther: "Other",
     formLabelMessage: "Message *",
     formSubmitButton: "Send Message",
-    formNote: "We'll respond within 24 business hours.",
+    formNote: "We'll respond within 48 business hours.",
 
     // Contact Info
     contactInfoTitle: "Contact Information",
     infoPhoneTitle: "Phone",
+    infoPhoneLandline: "(Landline)",
+    infoPhoneMobile: "(Mobile)",
     infoPhoneNote: "Mon-Fri, 9:00 - 18:00",
     infoEmailTitle: "Email",
-    infoEmailNote: "We respond within 24h",
+    infoEmailNote: "We respond within 48h",
     infoLocationTitle: "Location",
     infoLocationAddress: "Lisbon Metropolitan Area",
     infoLocationCountry: "Portugal",
@@ -219,7 +221,8 @@ const translations = {
     hoursMonFri: "Monday - Friday",
     hoursSat: "Saturday",
     hoursSun: "Sunday",
-    hoursClosed: "Closed",
+    hoursClosedSat: "Scheduled appointments only.",
+    hoursClosedSun: "Closed",
     hoursNote: "Appointments available by request",
 
     // Map
@@ -389,13 +392,15 @@ const translations = {
     formSelectOther: "Outro",
     formLabelMessage: "Mensagem *",
     formSubmitButton: "Enviar Mensagem",
-    formNote: "Responderemos dentro de 24 horas úteis.",
+    formNote: "Responderemos dentro de 48 horas úteis.",
 
     contactInfoTitle: "Informações de Contacto",
     infoPhoneTitle: "Telefone",
+    infoPhoneLandline: "(Fixo)",
+    infoPhoneMobile: "(Móvel)",
     infoPhoneNote: "Seg-Sex, 9:00 - 18:00",
     infoEmailTitle: "Email",
-    infoEmailNote: "Respondemos em 24h",
+    infoEmailNote: "Respondemos em 48h",
     infoLocationTitle: "Localização",
     infoLocationAddress: "Área Metropolitana de Lisboa",
     infoLocationCountry: "Portugal",
@@ -405,7 +410,8 @@ const translations = {
     hoursMonFri: "Segunda - Sexta",
     hoursSat: "Sábado",
     hoursSun: "Domingo",
-    hoursClosed: "Fechado",
+    hoursClosedSat: "Apenas mediante agendamento.",
+    hoursClosedSun: "Fechado",
     hoursNote: "Agendamentos disponíveis mediante pedido",
 
     mapSectionTitle: "Encontre-nos"

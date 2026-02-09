@@ -863,6 +863,26 @@ input:checked + .toggle-slider:hover {
   text-decoration: underline;
 }
 
+.phone-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px !important;
+}
+
+.phone-item i {
+  color: var(--viridian);
+  font-size: 14px;
+  width: 16px;
+}
+
+.phone-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-left: 4px;
+}
+
 .info-note {
   font-size: 13px !important;
   font-style: italic;
